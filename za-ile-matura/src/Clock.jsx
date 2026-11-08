@@ -6,7 +6,7 @@ import Footer from "./Footer.jsx";
 function Clock() {
   const year = new Date().getFullYear() + 1;
   const calcTimeLeft = () => {
-    let diff = new Date(`05/04/${year}`) - new Date();
+    let diff = new Date(`01/01/${year}`) - new Date();
     let timeLeft = {};
 
     if (diff > 0) {
@@ -35,13 +35,13 @@ function Clock() {
   });
   const element = (
     <div className="flex flex-col gap-4 text-center m-2">
-      <h1 className="text-4xl">Do matury {year} pozostalo: </h1>
+      <h1 className="text-4xl">Countdown to {year}:</h1>
       <BigCard item={timeLeft} />
-      <h1 className="text-4xl">Lub:</h1>
+      <h1 className="text-4xl">Detail:</h1>
       <div className="flex flex-col gap-4">
-        <Card item={timeLeft.hoursFull} text="Godzin" />
-        <Card item={timeLeft.minutesFull} text="minut" />
-        <Card item={timeLeft.secondsFull} text="sekund" />
+        <Card item={timeLeft.hoursFull} text="Hours" />
+        <Card item={timeLeft.minutesFull} text="Minutes" />
+        <Card item={timeLeft.secondsFull} text="Seconds" />
       </div>
       <Footer classname="pos" />
     </div>

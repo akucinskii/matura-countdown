@@ -6,19 +6,19 @@ function BigCard({ item }) {
     <div className="grid grid-cols-4 gap-4">
       <div className="">
         <Smallblock item={item.days} />
-        <p>{item.days > 1 ? " dni" : " dzien"}</p>
+        <p>{item.days > 1 ? " days" : " days"}</p>
       </div>
       <div className="">
         <Smallblock item={item.hours} />
-        <p>{item.days > 1 ? " godzin" : " godzina"}</p>
+        <p>{item.days > 1 ? " hours" : " hours"}</p>
       </div>
       <div className="">
         <Smallblock item={item.minutes} />
-        <p>{item.days > 1 ? " minut" : "minuta"}</p>
+        <p>{item.days > 1 ? " minutes" : "minutes"}</p>
       </div>
       <div className="">
         <Smallblock item={item.seconds} />
-        <p>{item.days > 1 ? "sekund" : " sekunda"}</p>
+        <p>{item.days > 1 ? "seconds" : " seconds"}</p>
       </div>
     </div>
   );
